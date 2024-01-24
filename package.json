@@ -1,12 +1,12 @@
 {
-  "name": "lang-map",
+  "name": "lang-exts-map",
   "description": "Get the language associated with a file extension or the extensions associated with a language using the data from GitHub's [Linguist YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)",
   "version": "0.4.0",
-  "homepage": "https://github.com/jonschlinkert/lang-map",
-  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "jonschlinkert/lang-map",
+  "homepage": "https://github.com/pawanpaudel93/lang-map",
+  "author": "Pawan Paudel (https://github.com/pawanpaudel93)",
+  "repository": "pawanpaudel93/lang-map",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/lang-map/issues"
+    "url": "https://github.com/pawanpaudel93/lang-map/issues"
   },
   "license": "MIT",
   "files": [
@@ -18,12 +18,12 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "update": "npm i language-map@latest --save && node support/build && npm test",
+    "update": "yarn add language-map@latest --dev && node support/build && npm test",
     "test": "mocha"
   },
   "devDependencies": {
-    "language-map": "^1.1.0",
-    "mocha": "*"
+    "language-map": "^1.5.0",
+    "mocha": "^10.2.0"
   },
   "keywords": [
     "classify",
@@ -44,9 +44,6 @@
     "match",
     "search"
   ],
-  "dependencies": {
-    "language-map": "^1.1.0"
-  },
   "verb": {
     "related": {
       "list": [

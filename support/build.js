@@ -5,18 +5,19 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+"use strict";
 
-var fs = require('fs');
-var path = require('path');
-var languages = require('language-map');
+var fs = require("fs");
+var path = require("path");
+var languages = require("language-map");
 
 function resolve(fp) {
-  return path.join(__dirname, '../lib/', fp);
+  return path.join(__dirname, "../lib/", fp);
 }
 
 function generate(languages) {
-  var inverted = {}, exts = {};
+  var inverted = {},
+    exts = {};
   var lang = {};
 
   for (var language in languages) {
@@ -25,7 +26,7 @@ function generate(languages) {
     if (!extensions) continue;
 
     exts[key] = extensions.map(function (ext) {
-      ext = ext.charAt(0 === '.') ? ext.slice(1) : ext;
+      ext = ext.charAt(0 === ".") ? ext.slice(1) : ext;
       lang[ext] = lang[ext] || [];
       lang[ext].push(key);
       return ext;
@@ -33,12 +34,12 @@ function generate(languages) {
   }
 
   var res = {};
-  res.exts = JSON.stringify(exts, null, 2);
-  res.lang = JSON.stringify(lang, null, 2);
+  res.exts = JSON.stringify(exts, null, 0);
+  res.lang = JSON.stringify(lang, null, 0);
   return res;
 }
 
 var mappings = generate(languages);
 
-fs.writeFileSync(resolve('lang.json'), mappings.lang);
-fs.writeFileSync(resolve('exts.json'), mappings.exts);
+fs.writeFileSync(resolve("lang.json"), mappings.lang);
+fs.writeFileSync(resolve("exts.json"), mappings.exts);

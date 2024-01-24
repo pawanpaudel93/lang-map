@@ -1,4 +1,4 @@
-# lang-map [![NPM version](https://badge.fury.io/js/lang-map.svg)](http://badge.fury.io/js/lang-map)
+# lang-exts-map [![NPM version](https://badge.fury.io/js/lang-exts-map.svg)](http://badge.fury.io/js/lang-exts-map)
 
 > Get the language associated with a file extension or the extensions associated with a language using the data from GitHub's [Linguist YAML file](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 
@@ -11,13 +11,13 @@ The API changed in v0.4.0. Please see the documentation below for details on the
 Install with [npm](https://www.npmjs.com/)
 
 ```sh
-$ npm i lang-map --save
+$ npm i lang-exts-map --save
 ```
 
 ## Usage
 
 ```js
-var map = require('lang-map');
+var map = require('lang-exts-map');
 ```
 
 ### Get language by extension
@@ -25,7 +25,7 @@ var map = require('lang-map');
 Returns the language that is associated with the given file extension (with or without `.`):
 
 ```js
-var map = require('lang-map');
+var map = require('lang-exts-map');
 
 map.languages('coffee');
 //=> [ 'coffeescript' ]
@@ -57,7 +57,7 @@ map.languages('h');
 Returns the list of file extensions associated with the given language:
 
 ```js
-var map = require('lang-map');
+var map = require('lang-exts-map');
 
 map.extensions('coffee');
 //=> [ 'coffee', '_coffee', 'cjsx', 'cson', 'iced' ]
@@ -74,14 +74,14 @@ map.extensions('c');
 ## Get the object of entensions
 
 ```js
-var map = require('lang-map');
+var map = require('lang-exts-map');
 var extensions = map().extensions;
 ```
 
 ## Get the object of languages
 
 ```js
-var map = require('lang-map');
+var map = require('lang-exts-map');
 var languages = map().languages;
 ```
 
@@ -107,7 +107,7 @@ $ npm i -d && npm test
 
 ## Contributing
 
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/lang-map/issues/new)
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/lang-exts-map/issues/new)
 
 ## Author
 
